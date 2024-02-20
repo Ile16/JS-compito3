@@ -83,4 +83,21 @@ console.log("Costo finale" + " " + totalCost)
 
 calcoloDelCostoTotale(amy); //bisogna sempre richiamare la funzione 
 
+//Creiamo un array per pushare - "listaUtenti" è il riferimento all'array 
+const listaUtenti = [];
+listaUtenti.push(paul, marco, amy);
+// funziona console.log(listaUtenti); ->escono tutti i dati dei tre utenti 
+
+
+for (let i = 0; i < listaUtenti.length; i++) {
+  let testo = `${listaUtenti[i].name} ${listaUtenti[i].lastName}`; //backtick interpretano i dati in javascript
+  
+  if (listaUtenti[i].isAmbassador){
+    testo += " è " 
+   } else {
+     testo += " non è"
+   }
+   testo += " un Ambassador";
+   console.log(testo)
+}
 
